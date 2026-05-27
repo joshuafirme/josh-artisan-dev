@@ -11,6 +11,7 @@
                     <ul class="navbar-nav ms-auto align-items-center">
                         <li class="nav-item"><a class="nav-link chunky-text" href="#about">BIOGRAPHY</a></li>
                         <li class="nav-item"><a class="nav-link chunky-text" href="#skills">ARSENAL</a></li>
+                        <li class="nav-item"><a class="nav-link chunky-text" href="#experience">EXP_LOG</a></li>
                         <li class="nav-item"><a class="nav-link chunky-text" href="#projects">MISSIONS</a></li>
                         <li class="nav-item ms-3">
                             <button @click="toggleTheme" class="btn btn-outline-retro theme-toggle">
@@ -140,6 +141,47 @@
             </div>
         </section>
 
+        <section id="experience" class="py-5 bg-retro-panel">
+            <div class="container py-5">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="fw-bold chunky-text text-retro-white">EXP_LOG</h2>
+                    <p class="opacity-75 chunky-text text-retro-white">PROFESSIONAL_WORK_HISTORY_</p>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-10" v-for="(exp, index) in experiences" :key="index" data-aos="fade-up"
+                        :data-aos-delay="index * 100">
+                        <div class="card border-retro shadow-sm custom-retro-card bg-retro-dark">
+                            <div class="card-body p-4 p-md-5">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-4">
+                                    <div>
+                                        <h4 class="fw-bold chunky-text text-primary mb-2">{{ exp.role }}</h4>
+                                        <h6 class="chunky-text text-retro-white opacity-75">{{ exp.company }}</h6>
+                                    </div>
+                                    <div
+                                        class="dummy-score chunky-text text-secondary mt-3 mt-md-0 px-3 py-2 border border-secondary d-inline-block text-center">
+                                        <i class="bi bi-calendar-terminal me-2"></i>{{ exp.date }}
+                                    </div>
+                                </div>
+
+                                <hr class="border-secondary opacity-25 mb-4">
+
+                                <ul class="list-unstyled mb-0">
+                                    <li v-for="(task, tIndex) in exp.responsibilities" :key="tIndex"
+                                        class="d-flex mb-3">
+                                        <span class="text-primary me-3 fw-bold blink-bullet">&gt;</span>
+                                        <span class="chunky-text text-retro-white opacity-75"
+                                            style="font-size: 0.85rem; line-height: 1.6;">{{ task }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Missions / Projects Section -->
         <section id="projects" class="py-5 bg-retro-missions">
             <div class="container py-5">
@@ -252,6 +294,36 @@ const str2 = "JOSH // UPTIME: 4 YEARS //";
 const str3 = "SOFTWARE DEVELOPER";
 const str4 = "LEVEL 1: BUILDING ROBUST APPLICATIONS. ARCHITECTING LARAVEL BACKENDS, DESIGNING VUE.JS FRONTS, AI SOLUTIONS & MORE. CLEAN, MAINTAINABLE CODE.";
 
+
+// --- WORK HISTORY DATA ---
+const experiences = [
+    {
+        role: 'FREELANCE FULL-STACK DEVELOPER',
+        company: 'MAKOPA INNOVATIONS AND TECHNOLOGIES',
+        date: 'NOV 2021 — MAR 2026',
+        responsibilities: [
+            'CREATE FULLY FUNCTIONAL, FAST, AND SECURE CUSTOM WEB AND MOBILE APPLICATIONS BASED ON THE REQUIREMENTS AND NEEDS OF THE CLIENT.',
+            'INTEGRATE 3PL API WITH THE CLIENT\'S EXISTING SYSTEM.',
+            'PROVIDED SOFTWARE APPLICATION ENGINEERING AND MAINTENANCE FOR THE DEVELOPMENT LIFECYCLE.',
+            'REVIEWED CODE, DEBUGGED PROBLEMS, AND CORRECTED ISSUES.',
+            'COORDINATED DEPLOYMENTS OF NEW SOFTWARE, FEATURE UPDATES, AND FIXES.'
+        ]
+    },
+    {
+        role: 'SOFTWARE ENGINEER',
+        company: 'CODALIFY SOFTWARE DEVELOPMENT, QUEZON CITY',
+        date: 'MAY 2021 — JUN 2023',
+        responsibilities: [
+            'DEVELOPING AND MODIFYING WEB-BASED WIDGETS.',
+            'INTEGRATING SOCIAL MEDIA APIS, AND PERFORMING WEB DATA SCRAPING.',
+            'DELIVERED HIGH-QUALITY CODE ON TIME, CONTRIBUTING TO OVERALL PROJECT SUCCESS.',
+            'OPTIMIZED SYSTEM PERFORMANCE WITH THOROUGH CODE REVIEWS AND REFACTORING EFFORTS.',
+            'DOCUMENTED TECHNICAL MANUALS TO BE USED BY IT PERSONNEL IN FUTURE PROJECTS.',
+            'CREATE TEST CASES TO MAXIMIZE THE SUCCESS OF MANUAL SOFTWARE TESTING.'
+        ]
+    }
+];
+
 // --- DATA ---
 const proficientSkills = [
     'PHP', 'Laravel', 'JavaScript', 'jQuery', 'Node.js',
@@ -304,10 +376,10 @@ const projects = [
 
 const activeScreenshots = ref([]);
 const openScreenshotModal = (images) => {
-  activeScreenshots.value = images;
-  if (modalInstance) {
-    modalInstance.show();
-  }
+    activeScreenshots.value = images;
+    if (modalInstance) {
+        modalInstance.show();
+    }
 };
 
 // --- METHODS ---

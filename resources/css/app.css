@@ -656,3 +656,33 @@
         width: 100%;
     }
 }
+
+/* --- Mobile (Screens smaller than 768px) --- */
+@media (max-width: 767.98px) {
+    /* (Your existing mobile rules will be here...) */
+
+    /* 1. Aggressively shrink all standard paragraphs and descriptions */
+    p.chunky-text, 
+    .card-text.chunky-text,
+    li .chunky-text {
+        font-size: 0.65rem !important; 
+        line-height: 1.8 !important; /* Increases spacing between lines for readability */
+    }
+    
+    /* 2. Override Bootstrap's .fs-5 in the Biography section */
+    .retro-dialogue-box .fs-5 {
+        font-size: 0.65rem !important;
+    }
+
+    /* 3. Shrink the Work History / Experience labels */
+    .dummy-score.text-secondary {
+        font-size: 0.6rem !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+    h4.fw-bold.chunky-text {
+        font-size: 1.1rem !important;
+    }
+    h6.chunky-text {
+        font-size: 0.75rem !important;
+    }
+}
