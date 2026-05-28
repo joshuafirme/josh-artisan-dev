@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-lg fixed-top shadow-sm"
             :class="isDark ? 'navbar-dark bg-retro-dark' : 'navbar-light bg-retro-light'">
             <div class="container">
-                <a class="navbar-brand fw-bold chunky-text" href="#">JOSH_DEV_SYSTEM_V1</a>
+                <a class="navbar-brand fw-bold chunky-text" href="#">JOSH_ARTISAN_DEV_V1</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -236,7 +236,7 @@
         <footer class="py-4 text-center bg-retro-footer" :class="isDark ? 'bg-darker' : 'bg-light'">
             <div class="container">
                 <p class="mb-0 opacity-75 chunky-text text-retro-white">© {{ new Date().getFullYear() }}
-                    JOSH_DEV_SYSTEM_V1 | BUILT_WITH_PHP_LARAVEL_VUEJS_BOOSTSTRAP5. &gt;&gt; POWER_ON_</p>
+                    JOSH_ARTISAN_DEV_V1 | BUILT_WITH_PHP_LARAVEL_VUEJS_BOOSTSTRAP5. &gt;&gt; POWER_ON_</p>
             </div>
         </footer>
     </div>

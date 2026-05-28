@@ -1,6 +1,6 @@
-# 🕹️ JOSH_DEV_SYSTEM_V1
+# 🕹️ JOSH_ARTISAN_DEV_V1
 
-Welcome to **JOSH_DEV_SYSTEM_V1**, an interactive, retro-arcade developer portfolio designed to showcase full-stack engineering skills through an immersive 8-bit terminal experience.
+Welcome to **JOSH_ARTISAN_DEV_V1**, an interactive, retro-arcade developer portfolio designed to showcase full-stack engineering skills through an immersive 8-bit terminal experience.
 
 Instead of a standard static page, this portfolio acts as a simulated arcade system, complete with a typing boot-up sequence, CRT monitor flicker, CSS parallax backgrounds, and custom retro UI components.
 
