@@ -407,27 +407,20 @@ const typeString = (targetString, reactiveVar, speed, callback) => {
     }, speed);
 };
 
-// Orchestrates the Boot-up animation
 const startBootSequence = () => {
-    // 1. Type system init
     typeString(str1, typedText1, 50, () => {
         showCursor1.value = false;
         showCursor2.value = true;
-
-        // 2. Wait a beat, type "JOSH IS NOW A"
         setTimeout(() => {
             typeString(str2, typedText2, 50, () => {
 
-                // 3. Type "SOFTWARE DEVELOPER"
                 typeString(str3, typedText3, 50, () => {
                     showCursor2.value = false;
                     showCursor3.value = true;
 
-                    // 4. Wait a beat, type the paragraph (faster)
                     setTimeout(() => {
                         typeString(str4, typedText4, 15, () => {
 
-                            // 5. Sequence complete, show UI
                             showButtons.value = true;
                             showAvatar.value = true;
                         });
